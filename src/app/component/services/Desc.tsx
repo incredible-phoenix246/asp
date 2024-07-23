@@ -32,7 +32,7 @@ const Desc = () => {
         )}
       >
         <p>
-          Unlock the potential of your business with Code Granite&apos;s
+          Unlock the potential of your business with ASPACE
           comprehensive range of services. We go beyond conventional solutions,
           offering a blend of innovation and functionality tailored to your
           unique needs.
