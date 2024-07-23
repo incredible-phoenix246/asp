@@ -44,7 +44,7 @@ const AboutUs = () => {
               Our Product Summary
             </h2>
             <p className="2xl:w-[720px] xl:w-[600px] w-full">
-              At Code Granites, we design and develop innovative digital
+              At ASPACE, we design and develop innovative digital
               solutions that go beyond expectations. From custom software to web
               and mobile applications, we craft products that elevate businesses
               to new heights.
