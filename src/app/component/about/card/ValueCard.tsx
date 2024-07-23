@@ -1,6 +1,7 @@
-import useInView from '@/hooks/useInView';
+
 import { OurValuesProps } from '@/libs/constants';
-import cn from '@/utils/tailwind';
+import useInView from '@/useInView';
+import cn from '@/utils';
 import Image from 'next/image';
 import React from 'react';
 
