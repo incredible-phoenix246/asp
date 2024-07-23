@@ -36,7 +36,7 @@ const Hero = () => {
             Services
           </p>
           <p className="w-[50%] sm:max-w-[80%] text-center sm:font-medium text-white/80 text-sm sm:text-lg">
-            Explore our services and let Code Granites be your partner in
+            Explore our services and let ASPACE be your partner in
             navigating the dynamic realm of digital innovation.
           </p>
         </div>
