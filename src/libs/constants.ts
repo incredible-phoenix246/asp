@@ -128,66 +128,90 @@ export const HOW_IT_WORKS: HowItWorksProps[] = [
 export const OurValues: OurValuesProps[] = [
   {
     id: 1,
-    title: "Innovation",
-    description: "We thrive on pushing boundaries and exploring new horizons.",
+    title: "Customer Centrism",
+    description:
+      "Our customers are our top priority. We strive to exceed their expectations and deliver high efficiency.",
     icon: value,
   },
   {
     id: 2,
-    title: "Collaboration",
+    title: "Excellence",
     description:
-      "Working together to achieve shared success and surpass expectations.",
+      "We are committed to exceptional delivery, continuously learning and improving to provide state-of-the-art solutions.",
     icon: value,
   },
   {
     id: 3,
-    title: "Excellence",
-    description: "Striving for the highest standards in everything we do.",
+    title: "Collaboration",
+    description:
+      "We value collaboration, actively engaging with clients to ensure effective and tailored solutions.",
+    icon: value,
+  },
+  {
+    id: 4,
+    title: "Innovation",
+    description:
+      "We stay at the forefront of technological advancements, ensuring our solutions are adaptable and forward-thinking.",
+    icon: value,
+  },
+  {
+    id: 5,
+    title: "Adaptability",
+    description:
+      "We are adaptable to changing needs and technologies, ensuring relevance and agility in a rapidly evolving landscape.",
+    icon: value,
+  },
+  {
+    id: 6,
+    title: "Integrity",
+    description:
+      "We uphold the highest standards of integrity in all our actions, ensuring trust and transparency.",
     icon: value,
   },
 ];
 
+
 export const Services: ServicesProps[] = [
   {
     id: 1,
-    title: "Custom Software Development:",
+    title: "Broadband Internet Services",
     description:
-      "Tailored solutions to meet your unique business needs, driving efficiency and growth.",
+      "We provide broadband internet services to offices, homes, and organizations using Fiber Optics, Microwave, or Satellite VSAT technology.",
     icon: dicover,
   },
   {
     id: 2,
-    title: "Web and Mobile Applications",
+    title: "LAN Deployment and Management",
     description:
-      "Engaging and responsive applications that elevate your online presence and user experience.",
+      "We manage the ever-changing technology needs of your business or home, allowing you to focus on your primary operations.",
     icon: menuBoard,
   },
   {
     id: 3,
-    title: "Digital Transformation",
+    title: "Software-as-a-Service",
     description:
-      "Guiding your business through the digital evolution, ensuring relevance and agility in a rapidly changing landscape.",
+      "We offer customizable solutions to improve productivity and efficiency, available as a one-off solution or a subscription-based service.",
     icon: monitor,
   },
   {
     id: 4,
-    title: "Consulting and Strategy",
+    title: "VOIP Solution",
     description:
-      "Strategic insights to align your technology initiatives with your business goals, optimizing performance and ROI.",
+      "Our Voice Over IP solution provides both internal and external communications with low call rates to all mobile service providers in Nigeria.",
     icon: people,
   },
   {
     id: 5,
-    title: "App Development",
+    title: "Cyber Security-as-a-Service",
     description:
-      "Strategic insights to align your technology initiatives with your business goals, optimizing performance and ROI.",
+      "We provide security for your data from cyber-attacks and educate your team on recent cyber threats and how to avoid them.",
     icon: search,
   },
   {
     id: 6,
-    title: "Deployment & Integration",
+    title: "Other Services",
     description:
-      "Guiding your business through the digital evolution, ensuring relevance and agility in a rapidly changing landscape.",
+      "We offer additional services including Smart Homes IoT and CCTV Installations, and Procurement-as-a-Service.",
     icon: stack,
   },
 ];
@@ -238,11 +262,11 @@ export const FAQS: FAQsProps[] = [
 export const APPROACH: ApproachProps[] = [
   {
     id: 1,
-    details: "Client-centric approach",
+    details: "Customer Centrism",
   },
   {
     id: 2,
-    details: "Attention to Detail",
+    details: "Excellence",
   },
   {
     id: 3,
@@ -250,13 +274,14 @@ export const APPROACH: ApproachProps[] = [
   },
   {
     id: 4,
-    details: "Fransparency and flexibility",
+    details: "Innovation",
   },
   {
     id: 5,
-    details: "Flexibility and Innovation",
+    details: "Adaptability",
   },
 ];
+
 
 export const PRIVACY_POLICY: PrivavyProps[] = [
   {

@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { CloseSquare, HambergerMenu } from "iconsax-react";
 
 const NAV_LINKS = [
+  { id: 1, link: "home", label: "home" },
   { id: 2, link: "services", label: "services" },
   { id: 3, link: "about-us", label: "about us" },
   { id: 4, link: "contacts", label: "contacts" },
