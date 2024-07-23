@@ -21,7 +21,7 @@ const Desc = () => {
             : " opacity-0 translate-y-36"
         )}
       >
-        Elevate Your Digital Presence with Code Granites
+        Elevate Your Digital Presence with ASPACE
       </h2>
       <div
         ref={worksRef}
