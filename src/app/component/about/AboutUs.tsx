@@ -1,17 +1,17 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
+import cn from "@/utils";
+import Image from "next/image";
 import { APPROACH } from "@/libs/constants";
 import { handleMouseEnter } from "@/libs/text-effect";
-import cn from "@/utils";
-import { useInView } from "framer-motion";
+import useInView from "@/hooks/useInView";
 
 const AboutUs = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
   const titleRef = React.useRef<HTMLHeadingElement>(null);
-  const isInView = useInView(worksRef);
-  const isInView2 = useInView(titleRef);
+  const isInView = useInView({ ref: worksRef });
+  const isInView2 = useInView({ ref: titleRef });
 
   return (
     <section className="my-8 lg:my-20 w-full flex flex-col md:gap-y-20 gap-y-10 items-center font-Worksans py-10 md:py-14 lg:py-20">
@@ -44,10 +44,10 @@ const AboutUs = () => {
               Our Product Summary
             </h2>
             <p className="2xl:w-[720px] xl:w-[600px] w-full">
-              At ASPACE, we design and develop innovative digital
-              solutions that go beyond expectations. From custom software to web
-              and mobile applications, we craft products that elevate businesses
-              to new heights.
+              At ASPACE, we design and develop innovative digital solutions that
+              go beyond expectations. From custom software to web and mobile
+              applications, we craft products that elevate businesses to new
+              heights.
             </p>
           </div>
 
