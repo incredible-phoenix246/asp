@@ -16,7 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 import "./slider.scss";
 import cn from "@/utils";
 import TestimonialCard from "../card/TestimonialCard";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 
 type PropType = {
   slides: number[];
@@ -25,7 +25,7 @@ type PropType = {
 
 const ClientSlider = () => {
   const slideRef = React.useRef<HTMLDivElement>(null);
-  const isInView = useInView(slideRef);
+  const isInView = useInView({ ref: slideRef, once: false });
   const options: EmblaOptionsType = { loop: true, duration: 10 };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);

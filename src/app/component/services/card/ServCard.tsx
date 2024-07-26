@@ -1,6 +1,5 @@
-
 import { ServicesProps } from "@/libs/constants";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 import cn from "@/utils";
 import Image from "next/image";
 import React from "react";

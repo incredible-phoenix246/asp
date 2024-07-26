@@ -5,7 +5,7 @@ import { OurValues } from "@/libs/constants";
 import cn from "@/utils";
 import { handleMouseEnter } from "@/libs/text-effect";
 import WorksCard from "../card/WorksCard";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 
 const OurValuesSection = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);

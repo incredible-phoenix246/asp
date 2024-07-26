@@ -4,13 +4,13 @@ import React from "react";
 import { Services } from "@/libs/constants";
 import cn from "@/utils";
 import WorksCard from "../card/WorksCard";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 
 const OurServices = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
   const titleRef = React.useRef<HTMLHeadingElement>(null);
-  const isInView = useInView(worksRef);
-  const isInView2 = useInView(titleRef);
+  const isInView = useInView({ ref: worksRef, once: false });
+  const isInView2 = useInView({ ref: titleRef, once: true });
 
   return (
     <section className="h-full w-full flex flex-col items-center mb-8 lg:mb-20 mt-8 gap-y-5 lg:gap-y-8 xl:gap-y-12 2xl:gap-y-20">

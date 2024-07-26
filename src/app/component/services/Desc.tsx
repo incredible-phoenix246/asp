@@ -2,13 +2,13 @@
 
 import React from "react";
 import cn from "@/utils";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 
 const Desc = () => {
   const worksRef = React.useRef<HTMLDivElement>(null);
   const titleRef = React.useRef<HTMLHeadingElement>(null);
-  const isInView = useInView(worksRef);
-  const isInView2 = useInView(titleRef);
+  const isInView = useInView({ ref: worksRef });
+  const isInView2 = useInView({ ref: titleRef });
 
   return (
     <section className="h-full w-full flex  flex-col items-center mb-8 lg:mb-20 mt-10 gap-y-5 lg:gap-y-8 xl:gap-y-12 2xl:gap-y-20">
@@ -32,10 +32,9 @@ const Desc = () => {
         )}
       >
         <p>
-          Unlock the potential of your business with ASPACE
-          comprehensive range of services. We go beyond conventional solutions,
-          offering a blend of innovation and functionality tailored to your
-          unique needs.
+          Unlock the potential of your business with ASPACE comprehensive range
+          of services. We go beyond conventional solutions, offering a blend of
+          innovation and functionality tailored to your unique needs.
         </p>
       </div>
     </section>

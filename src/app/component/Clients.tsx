@@ -5,11 +5,11 @@ import cn from "@/utils";
 import React from "react";
 
 import ClientSlider from "./sliders/ClientSlider";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 
 const Clients = () => {
   const clientRef = React.useRef<HTMLHeadingElement>(null);
-  const isInView = useInView(clientRef);
+  const isInView = useInView({ ref: clientRef });
   return (
     <section className={cn("w-full my-10 flex flex-col items-center ")}>
       <h2

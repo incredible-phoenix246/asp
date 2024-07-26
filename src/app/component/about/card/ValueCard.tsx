@@ -1,9 +1,8 @@
-
-import { OurValuesProps } from '@/libs/constants';
-import useInView from '@/useInView';
-import cn from '@/utils';
-import Image from 'next/image';
-import React from 'react';
+import { OurValuesProps } from "@/libs/constants";
+import useInView from "@/hooks/useInView";
+import cn from "@/utils";
+import Image from "next/image";
+import React from "react";
 
 const ValueCard = ({ title, description, icon }: OurValuesProps) => {
   const workRef = React.useRef<HTMLDivElement>(null);
@@ -13,8 +12,10 @@ const ValueCard = ({ title, description, icon }: OurValuesProps) => {
     <div
       ref={workRef}
       className={cn(
-        'w-full h-full bg-card max-w-[369px] flex flex-col items-center p-2 sm:p-4 py-6 rounded-lg xl:rounded-xl transition-all duration-1000 hover:duration-500 hover:shadow-[0_10px_30px_0_rgba(0,0,0,0.2)]',
-        isInView ? 'opacity-100 translate-y-0 delay-300 duration-1000' : ' opacity-0 translate-y-36',
+        "w-full h-full bg-card max-w-[369px] flex flex-col items-center p-2 sm:p-4 py-6 rounded-lg xl:rounded-xl transition-all duration-1000 hover:duration-500 hover:shadow-[0_10px_30px_0_rgba(0,0,0,0.2)]",
+        isInView
+          ? "opacity-100 translate-y-0 delay-300 duration-1000"
+          : " opacity-0 translate-y-36"
       )}
     >
       <div className="flex h-[80px] w-[80px] bg-white justify-center items-center">

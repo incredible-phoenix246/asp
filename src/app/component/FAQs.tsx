@@ -2,14 +2,14 @@
 
 import { FAQS } from "@/libs/constants";
 import cn from "@/utils";
-import { useInView } from "framer-motion";
+import useInView from "@/hooks/useInView";
 import Image from "next/image";
 import React, { useState } from "react";
 import { BsChevronRight } from "react-icons/bs";
 
 export const FAQs = () => {
   const faqRef = React.useRef<HTMLElement>(null);
-  const isInView = useInView(faqRef);
+  const isInView = useInView({ ref: faqRef });
   const [openIndex, setopenIndex] = useState<number | null>(null);
 
   const toggleFaq = (index: number) => {
@@ -39,7 +39,7 @@ export const FAQs = () => {
                 <div
                   key={faq.id}
                   className={cn(
-                    "relative text-[15px] flex w-full justify-between   xl:gap-8 border border-[#cdcdcd] sm:gap-x-10 sm:min-h-[90px] px-2 ",
+                    "relative text-[15px] flex w-full justify-between   xl:gap-8 border border-[#cdcdcd] sm:gap-x-10 sm:min-h-[90px] px-2 cursor-pointer",
                     openIndex === index
                       ? " sm:pb-4 sm:pt-2 gap-4 items-start"
                       : " items-center"
@@ -66,7 +66,6 @@ export const FAQs = () => {
                           : "h-0 opacity-0 absolute -z-10"
                       )}
                     >
-                      {" "}
                       {faq.answer}
                     </p>
                   </div>

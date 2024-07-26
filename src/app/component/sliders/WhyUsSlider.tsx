@@ -4,16 +4,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import { EmblaCarouselType, EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { PrevButton, NextButton, usePrevNextButtons } from "./SliderBtn";
-import slideByIdx, { INNOVATION_SLIDES } from "./slide";
+import { INNOVATION_SLIDES } from "./slide";
 import Autoplay from "embla-carousel-autoplay";
 import "./slider.scss";
 import Image from "next/image";
 import cn from "@/utils";
-
-type PropType = {
-  slides: number[];
-  options?: EmblaOptionsType;
-};
 
 const WhyUsSlider = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);

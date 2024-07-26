@@ -1,12 +1,12 @@
+import React from "react";
 import { HowItWorksProps } from "@/libs/constants";
-import useInView from "@/useInView";
+import useInView from "@/hooks/useInView";
 import cn from "@/utils";
 import Image from "next/image";
-import React, { useEffect } from "react";
 
 const WorksCard = ({ title, description, icon }: HowItWorksProps) => {
   const workRef = React.useRef<HTMLDivElement>(null);
-  const isInView = useInView(workRef);
+  const isInView = useInView({ ref: workRef, once: false });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { currentTarget: target } = e;
@@ -24,14 +24,14 @@ const WorksCard = ({ title, description, icon }: HowItWorksProps) => {
       ref={workRef}
       onMouseMove={handleMouseMove}
       className={cn(
-        "relative w-full h-[380px] bg-card sm:w-[369px] flex justify-center items-center p-[2px] rounded-lg xl:rounded-xl transition-all duration-1000 hover:delay-0 hover:duration-500 hover:shadow-[0_10px_30px_0_rgba(0,0,0,0.2)]   border border-gray-200 hover:border-none work-cards",
+        "relative w-full h-[380px]  sm:w-[369px] flex justify-center items-center p-[2px] rounded-lg xl:rounded-xl transition-all duration-1000 hover:delay-0 hover:duration-500 hover:shadow-[0_10px_30px_0_rgba(0,0,0,0.2)]  dark:border-primary  border border-gray-200 hover:border-none card",
         isInView
           ? "opacity-100 translate-y-0 delay-200 duration-1000"
           : " opacity-0 translate-y-36"
       )}
     >
       <div className="card-border" />
-      <div className="card-content w-full h-full flex flex-col items-center p-2 bg-card justify-center">
+      <div className="card-content w-full h-full flex flex-col items-center p-2 bg-white  justify-center">
         <div className="flex h-[80px] w-[80px] bg-white justify-center items-center">
           <Image src={icon} alt="icon" width={48} height={48} />
         </div>

@@ -5,6 +5,7 @@
 
 :root {
   --loader-text-color: #f6e9fe;
+  --card-color: #be1e2d;
 }
 
 * {
@@ -22,6 +23,7 @@
   transform-style: preserve-3d;
   transform: translate3d(0, 0, -140px) rotateX(121deg);
 }
+/* #2a3780 */
 .perspective {
   perspective: 300px;
   -webkit-perspective: 300px;
@@ -83,52 +85,6 @@
   }
 }
 
-.work-card {
-  .card-border,
-  &::before {
-    opacity: 0;
-    transition: opacity 500ms;
-    content: "";
-    position: absolute;
-    border-radius: inherit;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  &::before {
-    background: radial-gradient(
-      800px circle at var(--border--x) var(--border--y),
-      rgba(0, 0, 0, 0.002),
-      transparent 40%
-    );
-    z-index: 3;
-  }
-  &:hover {
-    .card-border,
-    &::before {
-      opacity: 1;
-    }
-  }
-
-  > .card-content {
-    border-radius: inherit;
-    margin: -4px;
-    position: relative;
-    z-index: 5;
-  }
-
-  .card-border {
-    background: radial-gradient(
-      500px circle at var(--border--x) var(--border--y),
-      #052c42,
-      transparent 40%
-    );
-    z-index: 1;
-  }
-}
-
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -136,7 +92,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
   height: 6px;
 }
 
@@ -145,13 +101,13 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #052c42;
-  border-radius: 8px;
+  background: #2a3780;
+  border-radius: 4px;
 }
 
 ::selection {
   color: white;
-  background: #052c42;
+  background: #2a3780;
 }
 
 svg text,
@@ -190,5 +146,51 @@ svg circle {
     stroke-width: 0;
     stroke-dashoffset: -25%;
     stroke-dasharray: 32% 0;
+  }
+}
+
+.card {
+  .card-border,
+  &::before {
+    opacity: 0;
+    transition: opacity 500ms;
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  &::before {
+    background: radial-gradient(
+      800px circle at var(--border--x) var(--border--y),
+      var(--card-color-dark),
+      transparent 40%
+    );
+    z-index: 3;
+  }
+  &:hover {
+    .card-border,
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  > .card-content {
+    border-radius: inherit;
+    margin: -4px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .card-border {
+    background: radial-gradient(
+      500px circle at var(--border--x) var(--border--y),
+      var(--card-color),
+      transparent 40%
+    );
+    z-index: 1;
   }
 }
