@@ -6,7 +6,7 @@ import React from "react";
 
 const ValueCard = ({ title, description, icon }: OurValuesProps) => {
   const workRef = React.useRef<HTMLDivElement>(null);
-  const isInView = useInView(workRef);
+  const isInView = useInView({ ref: workRef });
 
   return (
     <div
